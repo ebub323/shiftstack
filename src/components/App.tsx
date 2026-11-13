@@ -79,19 +79,22 @@ export default function App() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-5 py-10">
+    <div>
+      <div className="bg-[#101010] text-white"><div className="mx-auto max-w-7xl px-5 pb-14 pt-8">
       <header>
-        <div className="flex items-center gap-2 text-sm font-semibold tracking-tight"><span className="grid size-7 place-items-center rounded-lg bg-neutral-900 text-white dark:bg-white dark:text-neutral-900">S</span>ShiftStack</div>
-        <h1 className="mt-6 text-4xl font-semibold tracking-tight">Classes and shifts, without the collisions.</h1>
-        <p className="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
+        <div className="flex items-center gap-2 text-sm font-semibold tracking-tight"><span className="grid size-7 place-items-center rounded-md bg-white text-[#111]">S</span>ShiftStack</div>
+        <h1 className="mt-8 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-0.035em] sm:text-5xl">Classes and shifts, without the collisions.</h1>
+        <p className="mt-5 max-w-2xl text-[#a1a1aa]">
           See conflicts before they happen, what you will really earn (breaks and overtime included), and when you are free. Recurring events are kept
           as clock times in a time zone, so a 9am class stays at 9am when the clocks change, and a 10pm to 6am shift is correctly 9 hours on the night they go back.
         </p>
-        {isSample && <p className="mt-3 inline-block rounded-lg bg-amber-500/10 px-3 py-1.5 text-sm text-amber-900 dark:text-amber-200">This is a made-up sample schedule. Edit it, or start your own.</p>}
-        {notice && <p role="status" className="mt-3 block rounded-lg bg-neutral-100 px-3 py-1.5 text-sm dark:bg-neutral-800">{notice} <button className="ml-2 underline" onClick={() => setNotice("")}>Dismiss</button></p>}
+        {isSample && <p className="mt-3 inline-block rounded-lg bg-white/10 px-3 py-1.5 text-sm text-amber-200">This is a made-up sample schedule. Edit it, or start your own.</p>}
+        {notice && <p role="status" className="mt-3 block rounded-lg bg-white/10 px-3 py-1.5 text-sm text-white">{notice} <button className="ml-2 underline" onClick={() => setNotice("")}>Dismiss</button></p>}
       </header>
+      </div></div>
+      <div className="mx-auto max-w-7xl px-5 pb-10">
 
-      <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-4">
+      <div className="-mt-6 grid grid-cols-1 gap-6 lg:grid-cols-4">
         <section className={`${card} min-w-0 p-4 lg:col-span-3`}>
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <button className={btnGhost} onClick={() => setAnchor(addDays(weekStart, -7))} aria-label="Previous week">←</button>
@@ -183,6 +186,7 @@ export default function App() {
       <footer className="mt-12 border-t border-neutral-200 pt-5 text-xs leading-relaxed text-neutral-500 dark:border-neutral-800">
         Overtime is counted per employer over the pay week, at the multiplier you set. Whether you are owed it, and at what threshold, depends on where you work: check your own rules. Your schedule stays in this browser.
       </footer>
+    </div>
     </div>
   );
 }

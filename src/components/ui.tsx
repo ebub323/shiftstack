@@ -1,7 +1,7 @@
-export const card = "rounded-2xl border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900";
-export const input = "w-full rounded-lg border border-neutral-300 bg-white px-3 py-1.5 text-sm outline-none focus:border-neutral-900 dark:border-neutral-700 dark:bg-neutral-950 dark:focus:border-neutral-300";
-export const btn = "rounded-lg bg-neutral-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-neutral-700 disabled:cursor-not-allowed disabled:opacity-40 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-300";
-export const btnGhost = "rounded-lg border border-neutral-300 px-3 py-1.5 text-sm hover:bg-neutral-100 disabled:opacity-40 dark:border-neutral-700 dark:hover:bg-neutral-800";
+export const card = "rounded-xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(17,17,17,0.04)] dark:border-neutral-800 dark:bg-[#1a1a1a]";
+export const input = "w-full rounded-lg border border-neutral-300 bg-white px-3 py-1.5 text-sm outline-none focus:border-neutral-900 focus:ring-2 focus:ring-blue-500/25 dark:border-neutral-700 dark:bg-neutral-950 dark:focus:border-neutral-300";
+export const btn = "rounded-md bg-neutral-900 px-3.5 py-1.5 text-sm font-medium text-white hover:bg-[#242424] disabled:cursor-not-allowed disabled:opacity-40 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-300";
+export const btnGhost = "rounded-md border border-neutral-200 px-3.5 py-1.5 text-sm hover:bg-neutral-100 disabled:opacity-40 dark:border-neutral-700 dark:hover:bg-neutral-800";
 
 export function Chip({ tone, children }: { tone: "green" | "blue" | "violet" | "red" | "amber" | "gray"; children: React.ReactNode }) {
   const t = {
